@@ -19,7 +19,7 @@ train_path = "./fashion-mnist_train.csv"
 train_dataset = data_loader_csv_unsupervisied(train_path)
 
 
-def generate_save_plot(x: tf.Tensor, model:tf.keras.Model,image_name, n=8):
+def generate_save_plot(x: tf.Tensor, model: tf.keras.Model, image_name, n=8):
     plt.figure(figsize=(4, 4))
     for i in range(n):
         plt.subplot(4, 4, i + 1)
@@ -104,17 +104,18 @@ for test_data in data_loader_csv_unsupervisied(test_path).take(1):
 
 # training loop
 EPOCHS = 10
-for i in range(1,EPOCHS+1):
+for i in range(1, EPOCHS + 1):
 
-    start_time = time.time() # start time for the epoch
-    for data in train_dataset:   
+    start_time = time.time()  # start time for the epoch
+    for data in train_dataset:
 
         # train step
         train_step(autoencoder, generate_noise(data), data)
-    
+
     generate_save_plot(data, autencoder, f"{i}.png")
 
     if (i % 5) == 0:
         checkpoint.save(file_prefix=checkpoint_prefix)
 
-    print("Training Time for Epoch {} : {}".format(i, time.time()-start_time))
+    print("Training Time for Epoch {} : {}".format(i,
+                                                   time.time() - start_time))

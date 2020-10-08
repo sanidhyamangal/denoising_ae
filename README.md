@@ -3,7 +3,7 @@ A project to perform denoising opertaions on the images using Autoencoders. All 
 
 ![Denoise](denoiseae.gif "Denoise AutoEncoder")
 
-Above image first two rows shows the noisy images later ones renders reconstructed ones from those noisy imagesq:sqx:
+In above image first two rows renders the noisy images and last two rows same images but reconstructed by model
 
 ### Requirements
 - tensorflow >= 2.2

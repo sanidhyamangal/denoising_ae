@@ -8,8 +8,6 @@ import pathlib  # for path based ops
 import pandas as pd  # for data frame based ops
 import tensorflow as tf  # for deep learning and data processing
 
-train_path = "/home/sanidhya/Dataset/fashion-mnist_train.csv"
-
 
 def generate_noise(x: tf.Tensor,
                    noise_rate: float = 0.2,
@@ -39,6 +37,3 @@ def data_loader_csv_unsupervisied(df_path: str, batch_size=64, shuffle=True):
 
     # return dataset
     return dataset
-
-
-# train_path = "/home/sanidhya/Dataset/fashion-mnist_train.csv"

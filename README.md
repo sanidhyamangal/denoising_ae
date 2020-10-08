@@ -1,8 +1,9 @@
 # Denoising AutoEncoder
 A project to perform denoising opertaions on the images using Autoencoders. All the implementations is done using tensorflow and keras. 
 
-![alt Denoise](denoise.png "Denoise Autoencoder")
-in above image first two rows shows the noisy images later ones renders reconstructed ones from those noisy imagesq:sqx:
+![Denoise](denoiseae.gif "Denoise AutoEncoder")
+
+Above image first two rows shows the noisy images later ones renders reconstructed ones from those noisy imagesq:sqx:
 
 ### Requirements
 - tensorflow >= 2.2
